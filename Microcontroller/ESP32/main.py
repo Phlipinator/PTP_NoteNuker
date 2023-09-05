@@ -5,7 +5,7 @@ import machine
 import ubinascii
 
 from time import sleep
-from machine import Pin,PWM
+from machine import Pin
 
 # To create an MQTT client, we need to get the ESP unique ID
 client_id = ubinascii.hexlify(machine.unique_id())
@@ -23,15 +23,8 @@ topic2pub = b'NoteNuker'
 redButton = Pin(16, Pin.IN, Pin.PULL_UP)
 greenButton = Pin(26, Pin.IN, Pin.PULL_UP)
 
-relay = Pin(13, Pin.OUT)
-
-OFF_Position = 1000000
-ON_Position = 1500000
-
-
-servo = PWM(Pin(32))
-servo.freq(50)
-servo.duty_ns(OFF_Position)
+light = Pin(13, Pin.OUT)
+shredder = Pin(32, Pin.OUT)
 
 #############
 # Functions #
@@ -59,12 +52,12 @@ def publishMsg(msg):
         print('Failed to publish to topic \'%s\' with error: %s' % (topic, e))
 
 def activateShredderAndLight():
-    relay.value(1)
+    light.value(1)
     sleep(5)
-    servo.duty_ns(ON_Position)
+    shredder.value(1)
     sleep(5)
-    servo.duty_ns(OFF_Position)
-    relay.value(0)
+    shredder.value(0)
+    light.value(0)
         
 #####################
 # Execute on start: #
@@ -90,4 +83,5 @@ while True:
     if not greenButton.value():
         print("green Button is pressed")
         publishMsg('green')
+        activateShredderAndLight()
         sleep(1)
