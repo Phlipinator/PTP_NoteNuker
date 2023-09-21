@@ -14,8 +14,8 @@ import gc
 gc.collect()
 
 # Network credentials. (Change to yours.)
-ssid = 'Martin Router King'
-password = 'thalhammer'
+ssid = 'Phips IPhone'
+password = 'phips123'
 
 station = network.WLAN(network.STA_IF)
 
