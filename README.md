@@ -5,6 +5,8 @@ By pressing the red button you can submit a password into the manager and by pre
 
 The functionality of software and hardware will be described in greater detail in seperate READMEs.
 
+![Prototype](Prototype.JPG "Prototype")
+
 # Team #
 - Philipp Thalhammer (CAD & Hardware)
 - Michael Huber (CAD & Hardware)
