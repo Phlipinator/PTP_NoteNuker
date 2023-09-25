@@ -9,4 +9,4 @@ The functionality of software and hardware will be described in greater detail i
 - Philipp Thalhammer (CAD & Hardware)
 - Michael Huber (CAD & Hardware)
 - David (Software)
-- Ziyang (Software)
+- Ziyang Zhou (Software)
