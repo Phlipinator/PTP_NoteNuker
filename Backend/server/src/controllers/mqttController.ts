@@ -72,7 +72,7 @@ export async function createImageText(fileName: string) {
   const formData = new FormData();
 
   // Specify the local file path
-  //const filePath = 'C:/Users/david/Documents/GitHub/password-manager/pm-main/server/' + fileName;      //from Stream
+  //const filePath = 'C:/Users/david/Documents/GitHub/PTP_NoteNuker/Backend/server/' + fileName;      //from Stream
   const filePath = 'C:/Users/david/Downloads/userData3.jpg';                                             //test Image
   //const filePath = "C:/Users/janma/Desktop/David/userData.jpg"
   //const filePath = "C:/Users/janma/Documents/GitHub/pm-main/server/"+ fileName;
@@ -101,32 +101,34 @@ export async function createImageText(fileName: string) {
 
 
 //Extract user data from the OCR result         //TODO: David
-export function parseString(input1: string) {
-  const input = input1.replaceAll('\\', ' ');
+export async function parseString(input1: string) {
+  const input = input1.replaceAll('\\', '');
   const result: Record<string, string> = {};
   console.log("Input at parseString: "+input);
 
   // Regular expressions for matching the patterns
-  //const passwordPattern = /Password|PW|pw\s*=\s*"([^"]+)"/i;
   const passwordPattern = /(?<=Password=\s*")([^"\\]*(\\.[^"\\]*)*)"/g;
-  //const serviceNamePattern = /Service\s*Name|Service|SN|sn\s*=\s*"([^"]+)"/i;
   const serviceNamePattern = /(?<=Service=\s*")([^"\\]*(\\.[^"\\]*)*)"/g;
-  //const userNamePattern = /User\s*Name|User|UN|un\s*=\s*"([^"]+)"/i;
-  const userNamePattern = /(?<=Username=\s*")([^"\\]*(\\.[^"\\]*)*)"/g;
-  //const testPattern = /"([^"\\]*(\\.[^"\\]*)*)"/g
+  const userNamePattern = /(?<=Name=\s*")([^"\\]*(\\.[^"\\]*)*)"/g;
 
 
   // Try to match each pattern in the input string
   const passwordMatch = input.match(passwordPattern);
-  console.log("passwordMatch: "+passwordMatch);
-  const serviceNameMatch = input.match(serviceNamePattern);
-  console.log("serviceMatch: "+serviceNameMatch);
-  const userNameMatch = input.match(userNamePattern);
-  console.log("userMatch: "+userNameMatch);
-  //const testMatch = input.match(testPattern)
+  const pw = JSON.stringify(passwordMatch[0]);
+  const pw_ = pw.replace(/\\/g, ' ').replace(/\"/g, ' ');
+  console.log("passwordMatch: "+pw_);
 
-  //createDevices(serviceNameMatch as string, userNameMatch as string, passwordMatch as string);  //correct order? correct code position?  //remove ""?
-  //reload page/add to list
+  const serviceNameMatch = input.match(serviceNamePattern);
+  const sn = JSON.stringify(serviceNameMatch[0]);
+  const sn_ = sn.replace(/\\/g, ' ').replace(/\"/g, ' ');
+  console.log("serviceMatch: "+sn_);
+
+  const userNameMatch = input.match(userNamePattern);
+  const un = JSON.stringify(userNameMatch[0]);
+  const un_ = un.replace(/\\/g, ' ').replace(/\"/g, ' ');
+  console.log("userMatch: "+un_);
+
+  const newDevice = await createDevices(sn_, un_, pw_);
   return result;
 
 }

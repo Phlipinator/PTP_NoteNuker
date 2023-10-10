@@ -26,8 +26,7 @@ app.put('/devices/:deviceId', updateDeviceController);
 
 
 mongoose.connect(
-    'mongodb+srv://davidneu:uniL768xmCTl8cDU@cluster0.htlw1dr.mongodb.net/?retryWrites=true&w=majority'
-    //'mongodb+srv://DeviceManagerDavid:UNe3KHESIYED1s3v@cluster0.thyhbgd.mongodb.net/?retryWrites=true&w=majority'
+    'mongodb+srv://davidneu:FYb9WErJUZ0G3EWS@cluster0.htlw1dr.mongodb.net/?retryWrites=true&w=majority'
     ).then(() => {
         console.log(`Listening on Port${PORT}`);
         app.listen(PORT);

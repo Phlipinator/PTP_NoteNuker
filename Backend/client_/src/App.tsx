@@ -141,9 +141,7 @@ function App() {
           />
         <button >Edit access data</button>
         </form>
-        {/*<button onClick={() => takeScreenshot()}>Create Snapshot</button>*/}
         <button onClick={() => createImageText("lol")}>Create Snapshot</button>
-        
       </div>
   )
 }
