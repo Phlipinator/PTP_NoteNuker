@@ -12,10 +12,10 @@ client_id = ubinascii.hexlify(machine.unique_id())
 
 # MQTT Broker Data for PWP project
 # Home Assistant with mosquitto addon (remember to open port 1883 in the router)
-mqtt_server = 'philippsbroker.duckdns.org'
+mqtt_server = ''
 mqtt_port = 1883
-mqtt_user = 'mqtt_user'
-mqtt_pw = 'mqtt-docker'
+mqtt_user = ''
+mqtt_pw = ''
 
 # Topics this ESP will publish to. Has to be specified as a bytestring (b'text').
 topic2pub = b'NoteNuker'
