@@ -10,5 +10,5 @@ The functionality of software and hardware will be described in greater detail i
 # Team #
 - Philipp Thalhammer (CAD & Hardware)
 - Michael Huber (CAD & Hardware)
-- David (Software)
+- David Neubauer (Software)
 - Ziyang Zhou (Software)

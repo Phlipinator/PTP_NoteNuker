@@ -1,0 +1,156 @@
+/*
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.devices {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.devices table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.devices th,
+.devices td {
+  padding: 10px;
+  text-align: left;
+}
+
+.devices th {
+  background-color: #323131;
+}
+
+.devices tr:nth-child(even) {
+  background-color: #323131;
+}
+
+.devices button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#edit-button {  
+  background-color: #1f8abc;
+  color: white;
+  margin-left: 20px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.App form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+*/
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #121212;
+  color: #ffffff;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+}
+
+.devices {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.devices table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.devices th,
+.devices td {
+  padding: 12px;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  font-size: 1.2rem;
+}
+
+.devices th {
+  background-color: #1f1f1f;
+}
+
+.devices tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+.devices button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  font-size: 1rem;
+}
+
+.devices button:hover {
+  background-color: #c62828;
+}
+
+#edit-button {  
+  background-color: #1f8abc;
+  color: white;
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  font-size: 1rem;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.App form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.App input {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  font-size: 1rem;
+}
+
+.App label {
+  color: #ccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  font-size: 1.2rem;
+}
