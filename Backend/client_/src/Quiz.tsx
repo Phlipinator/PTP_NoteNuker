@@ -30,24 +30,26 @@ function App() {
   return (
 
       <div className='quiz-container flex_row'>
-        <div className='quiz'>
+        <div className='quiz flex_col'>
           <div><h1 className={"text_stroke"}>Quiz of the Day</h1></div>
-          <div className={"quiz_question"}>
-            Pretending to be banks, the IRS or some other organization and sending you an email or a letter asking for personal information is called __________.
-          </div>
-          <div>
-            <div className={"option"}>A. surfing</div>
-            <div className={"option"}>B. fishing</div>
-            <div className={"option"}>C. phishing</div>
-            <div className={"option"}>D. sailing</div>
-          </div>
-          <div>
-            <a href="/past-quizzes">Past Quizzes</a>
+          <div className={"quiz_content flex1 flex_col"}>
+            <div className={"quiz_question"}>
+              Pretending to be banks, the IRS or some other organization and sending you an email or a letter asking for personal information is called __________.
+            </div>
+            <div>
+              <div className={"option"}>A. surfing</div>
+              <div className={"option"}>B. fishing</div>
+              <div className={"option"}>C. phishing</div>
+              <div className={"option"}>D. sailing</div>
+            </div>
+            <div>
+              <a href="/past-quizzes">Past Quizzes</a>
+            </div>
           </div>
         </div>
-        <div className='leaderboard'>
+        <div className='leaderboard flex_col'>
           <div><h1>Leaderboard</h1></div>
-          <div className={"ranking"}>
+          <div className={"ranking flex1 flex_col"}>
             <div className={"rank_tag first3 flex_row"}>
               <div className={"rank"}>1</div>
               <div className={"flex1 name"}>Worms Jenkins</div>

@@ -162,6 +162,7 @@
   /*max-width: 1280px;*/
   place-items: center;
   max-width: 1280px;
+  padding: 0 120px 0 120px;
 }
 
 .App-container {

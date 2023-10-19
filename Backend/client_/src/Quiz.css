@@ -44,7 +44,11 @@
     width: auto;
     font-weight: 800;
     font-family: "Fira Sans Condensed", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
+.quiz_content {
+    overflow-y: scroll;
+    gap: 10px;
 }
 
 .text_stroke {
@@ -65,9 +69,12 @@
     font-weight: 600;
     text-align: left;
     padding: 0 15px 0 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
+.option:hover {
+    background: #00000036;
 }
 
 .rank_tag {
@@ -78,7 +85,7 @@
     height: 80px;
     font-weight: 600;
     text-align: left;
-    margin: 20px 40px 20px 40px;
+    margin: 0 40px 20px 40px;
     color: #333333;
     font-size: 22px;
     font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -93,6 +100,7 @@
 .ranking {
     width: 100%;
     max-width: 800px;
+    overflow-y: scroll;
 }
 
 .rank {
@@ -110,4 +118,8 @@
     width: 120px;
     flex: none;
 
+}
+
+.name {
+    overflow: hidden;
 }
