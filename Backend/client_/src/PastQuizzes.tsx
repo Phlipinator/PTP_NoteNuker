@@ -36,7 +36,7 @@ function App() {
               </div>
             </div>
             <div className={"past-quiz-block"}>
-              <div className={"past-date"}>October 10, 2023</div>
+              <div className={"past-date"}>October 5, 2023</div>
               <div className={"quiz_question"}>Which of these answers describes the best way to protect against tech support scams?</div>
               <div className={"past-options flex_row"}>
                 <div>A. Use a unique password for each account.</div>
