@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './Quiz.css';
 import { getScores, TScore } from './api/getScores';
 import { createImageText } from './api/createImageText';
+import champion from'./assets/champion.png';
 
 
 
@@ -50,8 +51,9 @@ function App() {
         <div className='leaderboard flex_col'>
           <div><h1>Leaderboard</h1></div>
           <div className={"ranking flex1 flex_col"}>
-            <div className={"rank_tag first3 flex_row"}>
-              <div className={"rank"}>1</div>
+            <div className={"rank_tag first first3 flex_row"}>
+              {/*<img src={champion} alt={champion} id="champion"/>*/}
+              <div className={"rank"} style={{ backgroundImage: `url(${champion})`}}>1</div>
               <div className={"flex1 name"}>Worms Jenkins</div>
               <div className={"score"}>125P</div>
             </div>

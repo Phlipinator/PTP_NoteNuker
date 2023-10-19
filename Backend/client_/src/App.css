@@ -89,6 +89,10 @@
   border-collapse: separate;
 }
 
+.devices td {
+  cursor: pointer;
+}
+
 .devices th,
 .devices td {
   padding: 3px 30px 3px 34px;
@@ -119,7 +123,6 @@
 .devices tr {
   background-color: white;
   color: #1f1f1f;
-  cursor: pointer;
 }
 
 .devices button {
