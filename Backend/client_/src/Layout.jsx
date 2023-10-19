@@ -1,5 +1,5 @@
 import './Layout.css';
-import {Outlet} from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 
 function Layout() {
     return (
@@ -7,8 +7,8 @@ function Layout() {
             <div className={"flex_row navbar"}>
                 <div className={"flex1 logo"}>Note Nuker</div>
                 <ul className={"flex_row menu"}>
-                    <li><a href="/">Password Manager</a></li>
-                    <li><a href="/quiz">Quiz</a></li>
+                    <li><NavLink to='/' activeClassName="active">Password Manager</NavLink></li>
+                    <li><NavLink to='/quiz' activeClassName="active">Quiz</NavLink></li>
                     <li>Log out</li>
                 </ul>
             </div>

@@ -4,25 +4,33 @@
     font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 300;
     color: white !important;
+    position: absolute;
+    width: 100%;
 }
 
 .logo {
-    padding: 5px;
+    /*padding: 5px;*/
     font-size: 38px;
     font-weight: 800;
     font-family: "Caveat", ui-sans-serif;
+    margin: 2rem 3rem;
 }
 
 .menu {
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     list-style-type: none;
     font-size: 18px;
+    margin: 2rem 3rem;
 }
 
 .menu li {
     /*collapse: true;*/
     padding-left: 18px;
+}
+
+.active {
+    font-weight: 700;
 }
 
 .flex1 {

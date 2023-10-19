@@ -80,13 +80,28 @@ function App() {
               <div className={"flex1 name"}>Worms Jenkins</div>
               <div className={"score"}>125P</div>
             </div>
-            <div className={"rank_tag flex_row"}>
+            <div className={"rank_tag first3 flex_row"}>
               <div className={"rank"}>2</div>
               <div className={"flex1 name"}>Worms Jenkins</div>
               <div className={"score"}>125P</div>
             </div>
-            <div className={"rank_tag flex_row"}>
+            <div className={"rank_tag first3 flex_row"}>
               <div className={"rank"}>3</div>
+              <div className={"flex1 name"}>Worms Jenkins</div>
+              <div className={"score"}>125P</div>
+            </div>
+            <div className={"rank_tag flex_row"}>
+              <div className={"rank"}>4</div>
+              <div className={"flex1 name"}>Worms Jenkins</div>
+              <div className={"score"}>125P</div>
+            </div>
+            <div className={"rank_tag flex_row"}>
+              <div className={"rank"}>4</div>
+              <div className={"flex1 name"}>Worms Jenkins</div>
+              <div className={"score"}>125P</div>
+            </div>
+            <div className={"rank_tag flex_row"}>
+              <div className={"rank"}>4</div>
               <div className={"flex1 name"}>Worms Jenkins</div>
               <div className={"score"}>125P</div>
             </div>

@@ -17,6 +17,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -30,6 +32,7 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   /*place-items: center;*/
   min-width: 320px;
@@ -41,6 +44,9 @@ h1 {
   font-size: 2.5em;
   line-height: 1.1;
   /*font-family: "Bebas Neue";*/
+  font-family: "Bebas Neue", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  padding-top: 120px;
 }
 
 button {
