@@ -105,51 +105,60 @@ function App() {
             ))}
           </tbody>
         </table>
-        <form onSubmit={handleCreateDevice}>  
-          <label htmlFor = "device-name" >Service Name</label>
-          <input
-            id = "device-name"
-            value = {DeviceName}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setDeviceName(e.target.value); //storing what a user types, as he types it
-            }}
-          />
-          
-
-          <label htmlFor = "owner-name" >User Name</label>
-          <input
-            id = "owner-name"
-            value = {OwnerName}
-            onChange={(e2: React.ChangeEvent<HTMLInputElement>) => {
-              setOwnerName(e2.target.value); 
-            }}
-          />
-
-          <label htmlFor = "pass-word" >Password</label>
-          <input
-            id = "pass-word"
-            value = {Password}
-            onChange={(e3: React.ChangeEvent<HTMLInputElement>) => {
-              setPassword(e3.target.value); 
-            }}
-          />
+        <div className="flex_row advanced_toggle" onClick={() => {
+          const adv_opt = document.getElementById("advanced");
+          adv_opt.style.display = (adv_opt.style.display != 'none' ? 'none' : 'block' )
+        }}>
+          <div className="advanced advanced_off">Advanced</div>
+          <div className="line flex1"></div>
+        </div>
+        <div id="advanced" style={{display: "none"}}>
+          <form onSubmit={handleCreateDevice}>
+            <label htmlFor = "device-name" >Service Name</label>
+            <input
+                id = "device-name"
+                value = {DeviceName}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  setDeviceName(e.target.value); //storing what a user types, as he types it
+                }}
+            />
 
 
-          
-          <button>Add access data</button>
-        </form>
-        <form onSubmit={handleUpdateDevice}>  
-          <label htmlFor = "update-DeviceID" >ID of access data for update</label>
-          <input
-            id = "update-DeviceID"
-            value = {updateDeviceID}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setUpdateDeviceID(e.target.value); 
-            }}
-          />
-        <button >Edit access data</button>
-        </form>
-        <button onClick={() => createImageText("lol")}>Create Snapshot</button>
+            <label htmlFor = "owner-name" >User Name</label>
+            <input
+                id = "owner-name"
+                value = {OwnerName}
+                onChange={(e2: React.ChangeEvent<HTMLInputElement>) => {
+                  setOwnerName(e2.target.value);
+                }}
+            />
+
+            <label htmlFor = "pass-word" >Password</label>
+            <input
+                id = "pass-word"
+                value = {Password}
+                onChange={(e3: React.ChangeEvent<HTMLInputElement>) => {
+                  setPassword(e3.target.value);
+                }}
+            />
+
+
+
+            <button>Add access data</button>
+          </form>
+          <form onSubmit={handleUpdateDevice}>
+            <label htmlFor = "update-DeviceID" >ID of access data for update</label>
+            <input
+                id = "update-DeviceID"
+                value = {updateDeviceID}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  setUpdateDeviceID(e.target.value);
+                }}
+            />
+            <button >Edit access data</button>
+          </form>
+          <button onClick={() => createImageText("lol")}>Create Snapshot</button>
+        </div>
       </div>
       </div>
   )
