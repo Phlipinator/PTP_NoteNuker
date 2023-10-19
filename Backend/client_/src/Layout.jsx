@@ -5,7 +5,7 @@ function Layout() {
     return (
         <div>
             <div className={"flex_row navbar"}>
-                <div className={"flex1 logo"}>Note Nuker</div>
+                <div className={"flex1 logo"}><a href={"/"}>Note Nuker</a></div>
                 <ul className={"flex_row menu"}>
                     <li><NavLink to='/' activeClassName="active">Password Manager</NavLink></li>
                     <li><NavLink to='/quiz' activeClassName="active">Quiz</NavLink></li>

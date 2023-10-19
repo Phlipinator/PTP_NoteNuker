@@ -91,7 +91,7 @@
 
 .devices th,
 .devices td {
-  padding: 3px 12px 3px 34px;
+  padding: 3px 30px 3px 34px;
   text-align: left;
   /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; !* Modern sans-serif font *!*/
   font-size: 1.2rem;
@@ -119,6 +119,7 @@
 .devices tr {
   background-color: white;
   color: #1f1f1f;
+  cursor: pointer;
 }
 
 .devices button {
@@ -136,6 +137,10 @@
 
 .devices button:hover {
   background-color: #c62828;
+}
+
+.delete_icon {
+  vertical-align: middle;
 }
 
 #edit-button {  
@@ -161,7 +166,7 @@
   gap: 20px;
   /*max-width: 1280px;*/
   place-items: center;
-  max-width: 1280px;
+  max-width: 960px;
   padding: 0 120px 0 120px;
 }
 

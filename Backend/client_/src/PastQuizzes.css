@@ -22,7 +22,7 @@
 
 .past-options {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     margin-top: 10px;
 }
 
@@ -35,12 +35,13 @@
 
 .past-options > div {
     flex: none;
-    width: calc(50% - 44px);
+    width: calc(50% - 46px);
     text-align: left;
-    line-height: 35px;
-    background: #00000012;
+    line-height: 32px;
+    background: #00000019;
     border: dashed 1px white;
     border-radius: 10px;
+    margin-top: 2px;
     /*text-align: center;*/
     /*height: 45px;*/
     /*margin: 10px 0 10px 0;*/
@@ -50,5 +51,19 @@
     font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     overflow-x: hidden;
     white-space: nowrap;
+}
 
+.correct {
+    background: #61D41B67 !important;
+    border: 1px solid #5EAF2D80 !important;
+}
+
+.wrong {
+    background: #AF342D67 !important;
+    border: 1px solid #AF342D80 !important;
+}
+
+.correction {
+    /*background: #61D41B67 !important;*/
+    border: 2px dotted #5BC827 !important;
 }

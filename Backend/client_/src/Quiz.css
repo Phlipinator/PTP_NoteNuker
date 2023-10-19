@@ -60,7 +60,7 @@
     /*align-content: center;*/
     line-height: 45px;
     /*text-align: center;*/
-    background: #00000012;
+    background: #00000019;
     border: dashed 1px white;
     border-radius: 10px;
     /*text-align: center;*/
@@ -74,7 +74,7 @@
 }
 
 .option:hover {
-    background: #00000036;
+    background: #00000045;
 }
 
 .rank_tag {
