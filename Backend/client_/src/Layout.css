@@ -1,0 +1,46 @@
+.navbar {
+    /*width: 100vw;*/
+    padding-bottom: 30px;
+    font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: white !important;
+}
+
+.logo {
+    padding: 5px;
+    font-size: 38px;
+    font-weight: 800;
+    font-family: "Caveat", ui-sans-serif;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.menu li {
+    /*collapse: true;*/
+    padding-left: 18px;
+}
+
+.flex1 {
+    display: flex;
+    flex-grow: 1;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: initial;
+    right: 0;
+}

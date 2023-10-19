@@ -1,0 +1,109 @@
+
+.quiz-container {
+    display: flex;
+    /*flex-direction: column;*/
+    /*max-width: 1280px;*/
+    /*place-content: center;*/
+    flex: 1;
+}
+
+.quiz {
+    margin: 0 20px 0 20px;
+    display: flex;
+    /*flex-grow: 1;*/
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    /*max-width: 1280px;*/
+    /*place-items: center;*/
+    /*height: 100%;*/
+    max-width: 500px;
+}
+
+.leaderboard {
+    display: flex;
+    /*flex-grow: 2;*/
+    flex: 2;
+    flex-direction: column;
+    gap: 20px;
+    /*max-width: 1280px;*/
+    place-items: center;
+    background: #220C5F;
+}
+
+.quiz_question {
+    /*padding: 10px;*/
+    text-align: left;
+    /*margin: 10px;*/
+    /*width: 100%;*/
+    font-size: 20px;
+    width: auto;
+    font-weight: 800;
+    font-family: "Fira Sans Condensed", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+
+.text_stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.option {
+    /*align-content: center;*/
+    line-height: 45px;
+    /*text-align: center;*/
+    background: #00000012;
+    border: dashed 1px white;
+    border-radius: 10px;
+    /*text-align: center;*/
+    height: 45px;
+    margin: 10px 0 10px 0;
+    font-weight: 600;
+    text-align: left;
+    padding: 0 15px 0 15px;
+    font-size: 20px;
+    font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+
+.rank_tag {
+    line-height: 80px;
+    background: white;
+    border-radius: 8px;
+    /*text-align: center;*/
+    height: 80px;
+    font-weight: 600;
+    text-align: left;
+    margin: 20px 40px 20px 40px;
+    color: #333333;
+    font-size: 22px;
+    font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.first3 {
+    /*background: rgb(227,99,99);*/
+    background: linear-gradient(180deg, rgba(227,99,99,1) 0%, rgba(224,45,45,1) 100%) !important;
+    color: white !important;
+}
+
+.ranking {
+    width: 100%;
+    max-width: 800px;
+}
+
+.rank {
+    display: flex;
+    width: 90px;
+    flex: none;
+    font-size: 40px;
+    padding-left: 30px;
+    font-weight: 800;
+    /*margin: 0 20px 0 20px;*/
+}
+
+.score {
+    display: flex;
+    width: 120px;
+    flex: none;
+
+}

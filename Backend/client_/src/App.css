@@ -62,55 +62,76 @@
 
 */
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px;*/
+  width: 100vw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #121212;
+  background-color: #3B0FBA;
   color: #ffffff;
   border-radius: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  /*font-family: 'Bebas Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; !* Modern sans-serif font *!*/
 }
 
 .devices {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #444;
+  /*border: 1px solid #444;*/
   border-radius: 5px;
   overflow: hidden;
+  border-spacing: 0 1em;
 }
 
 .devices table {
   width: 100%;
-  border-collapse: collapse;
+  /*border-collapse: collapse;*/
+  font-family: 'Bebas Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  border-collapse: separate;
 }
 
 .devices th,
 .devices td {
-  padding: 12px;
+  padding: 3px 12px 3px 34px;
   text-align: left;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; !* Modern sans-serif font *!*/
   font-size: 1.2rem;
 }
 
+.devices td:first-child,
+.devices th:first-child {
+  border-radius: 13px 0 0 13px;
+ }
+
+.devices td:last-child,
+.devices th:last-child {
+  border-radius: 0 13px 13px 0;
+ }
+
 .devices th {
-  background-color: #1f1f1f;
+  background-color: #3B0FBA;
+  color: white;
 }
 
 .devices tr:nth-child(even) {
-  background-color: #1a1a1a;
+  /*background-color: #1a1a1a;*/
+}
+
+.devices tr {
+  background-color: white;
+  color: #1f1f1f;
 }
 
 .devices button {
   background-color: #e53935;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 50%;
   transition: background-color 0.3s ease;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
   font-size: 1rem;
+  aspect-ratio: 1;
 }
 
 .devices button:hover {
@@ -118,17 +139,35 @@
 }
 
 #edit-button {  
-  background-color: #1f8abc;
+  background-color: #787890;
   color: white;
-  margin-left: 20px;
+  margin-left: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
   font-size: 1rem;
 }
 
+#edit-button:hover {
+  background-color: #44445d;
+}
+
+.actions {
+  text-align: right !important;
+}
+
 .App {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   gap: 20px;
+  /*max-width: 1280px;*/
+  place-items: center;
+  max-width: 1280px;
+}
+
+.App-container {
+  display: flex;
+  /*flex-direction: column;*/
+  place-content: center;
 }
 
 .App form {
@@ -140,8 +179,8 @@
 }
 
 .App input {
-  background-color: #333;
-  border: 1px solid #555;
+  background-color: #220C5F;
+  border: 1px solid #13003d;
   color: #fff;
   padding: 10px;
   border-radius: 4px;
@@ -151,6 +190,6 @@
 
 .App label {
   color: #ccc;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; !* Modern sans-serif font *!*/
   font-size: 1.2rem;
 }

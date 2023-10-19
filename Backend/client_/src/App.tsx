@@ -55,18 +55,19 @@ function App() {
 
 
   return (
-    
+
+      <div className='App-container'>
       <div className='App'>
-        <h1>Note Nuker</h1>
-        <form id="sort-selection" onClick={handleGetDevice}>  
-          <label htmlFor = "sort-type">Sort Type:</label>
-            <select id="sort-type" value={sortType}  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
-              setSortType(e.target.value as "N-asc" | "N-desc" | undefined);
-            }}>
-              <option value="N-asc">Service Name (A-Z)</option>
-              <option value="N-desc">Service Name (Z-A)</option>
-            </select>
-        </form>
+        <h1>Passwords</h1>
+        {/*<form id="sort-selection" onClick={handleGetDevice}>  */}
+        {/*  <label htmlFor = "sort-type">Sort Type:</label>*/}
+        {/*    <select id="sort-type" value={sortType}  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {*/}
+        {/*      setSortType(e.target.value as "N-asc" | "N-desc" | undefined);*/}
+        {/*    }}>*/}
+        {/*      <option value="N-asc">Service Name (A-Z)</option>*/}
+        {/*      <option value="N-desc">Service Name (Z-A)</option>*/}
+        {/*    </select>*/}
+        {/*</form>*/}
 
         <table className='devices'>
           <thead>
@@ -74,7 +75,7 @@ function App() {
               <th>Service Name</th>
               <th>User Name</th>
               <th>Password</th> 
-              <th>Actions</th> 
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -83,15 +84,14 @@ function App() {
                 <td>{Device.DeviceName}</td>
                 <td>{Device.OwnerName}</td>
                 <td>{Device.Password}</td>
-                <td>
+                <td className="actions">
                   <button onClick={() => handleDeleteDevice(Device._id)}>X</button>
-                
                   <button id="edit-button" onClick={() => {
                     setUpdateDeviceID(Device._id);
                     setDeviceName(Device.DeviceName);
                     setOwnerName(Device.OwnerName);   
                     setPassword(Device.Password); 
-                  } }>Select</button>
+                  } }>✓</button>
                 </td>
               </tr>
             ))}
@@ -142,6 +142,7 @@ function App() {
         <button >Edit access data</button>
         </form>
         <button onClick={() => createImageText("lol")}>Create Snapshot</button>
+      </div>
       </div>
   )
 }
