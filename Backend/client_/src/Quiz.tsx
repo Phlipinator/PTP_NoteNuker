@@ -1,57 +1,30 @@
 import { useState, useEffect } from 'react';
 import './Quiz.css';
-import { deleteDevices } from './api/deleteDevices';
-import { getDevices, TDevice } from './api/getDevices';
-import { createDevices } from './api/createDevices';
-import { updateDevice } from './api/updateDevice';
+import { getScores, TScore } from './api/getScores';
 import { createImageText } from './api/createImageText';
 
 
 
 function App() {
-  const [devices, setDevices] = useState<TDevice[]> ([]); 
-  const [DeviceName, setDeviceName] = useState(''); 
-  const [OwnerName, setOwnerName] = useState(''); 
-  const [Password, setPassword] = useState('');
-  const [updateDeviceID, setUpdateDeviceID] = useState ('');
+  const [scores] = useState<TScore[]> ([]);
+  const [Name] = useState('');
+  const [Point] = useState('');
   const [sortType, setSortType] = useState<"N-asc" | "N-desc" | undefined>("N-asc");
-  
-
-  // sends user input to API
-  async function handleCreateDevice(e: React.FormEvent) {
-    e.preventDefault(); 
-    const newDevice = await createDevices(DeviceName, OwnerName, Password);
-    setDevices([...devices, newDevice]); //update displayed array with new device
-    setDeviceName(""); 
-  }
-
-  async function handleDeleteDevice(deviceId: string) {
-    deleteDevices(deviceId);
-    setDevices(devices.filter((device) => device._id !== deviceId))
-  }
-
-  async function handleUpdateDevice(e: React.FormEvent) {
-    e.preventDefault();
-    console.log("handleUpdateDevice called");
-    /*const updatedDevice =*/ await updateDevice(DeviceName, OwnerName, Password, updateDeviceID);
-    //setDevices([...devices, updatedDevice]);
-    fetchDevices();
-  }
-
-  async function handleGetDevice(e: React.FormEvent) {
-    e.preventDefault();
-    fetchDevices();
-  }
-
-  async function fetchDevices() {
-    const newDevices = await getDevices(sortType);
-    setDevices(newDevices);
-  }
 
 
-  useEffect(() => { 
-    fetchDevices();
-  },  []);
+  // async function handleGetDevice(e: React.FormEvent) {
+  //   e.preventDefault();
+  //   fetchDevices();
+  // }
+  //
+  // async function fetchDevices() {
+  //   const newDevices = await getScores(sortType);
+  // }
+  //
+  //
+  // useEffect(() => {
+  //   fetchDevices();
+  // },  []);
 
 
   return (
@@ -82,33 +55,33 @@ function App() {
             </div>
             <div className={"rank_tag first3 flex_row"}>
               <div className={"rank"}>2</div>
-              <div className={"flex1 name"}>Worms Jenkins</div>
-              <div className={"score"}>125P</div>
+              <div className={"flex1 name"}>Boxelder Wigglesworth</div>
+              <div className={"score"}>120P</div>
             </div>
             <div className={"rank_tag first3 flex_row"}>
               <div className={"rank"}>3</div>
-              <div className={"flex1 name"}>Worms Jenkins</div>
-              <div className={"score"}>125P</div>
+              <div className={"flex1 name"}>Huckleberry Nettles</div>
+              <div className={"score"}>118P</div>
             </div>
             <div className={"rank_tag flex_row"}>
               <div className={"rank"}>4</div>
-              <div className={"flex1 name"}>Worms Jenkins</div>
-              <div className={"score"}>125P</div>
+              <div className={"flex1 name"}>Joe Pottin Soil Olivetti</div>
+              <div className={"score"}>115P</div>
             </div>
             <div className={"rank_tag flex_row"}>
-              <div className={"rank"}>4</div>
-              <div className={"flex1 name"}>Worms Jenkins</div>
-              <div className={"score"}>125P</div>
+              <div className={"rank"}>5</div>
+              <div className={"flex1 name"}>Zoowee Blubberworth</div>
+              <div className={"score"}>100P</div>
             </div>
             <div className={"rank_tag flex_row"}>
-              <div className={"rank"}>4</div>
-              <div className={"flex1 name"}>Worms Jenkins</div>
-              <div className={"score"}>125P</div>
+              <div className={"rank"}>6</div>
+              <div className={"flex1 name"}>Flufffy Gloomkins</div>
+              <div className={"score"}>94P</div>
             </div>
             <div className={"rank_tag flex_row"}>
-              <div className={"rank"}>4</div>
-              <div className={"flex1 name"}>Worms Jenkins</div>
-              <div className={"score"}>125P</div>
+              <div className={"rank"}>7</div>
+              <div className={"flex1 name"}>Buritt Noseface</div>
+              <div className={"score"}>82P</div>
             </div>
           </div>
         </div>
